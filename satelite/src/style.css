@@ -1,0 +1,107 @@
+.back{
+
+   background-color: rgb(45, 45, 57);
+    background-size: cover;
+    height: 730px;
+    
+}
+/* styles.css */
+
+  .spin {
+    animation: spin infinite 2s linear;
+    background-size: cover;
+    height: 730px;
+    width: 1530px;
+  }
+  
+.top{
+  position: relative;
+  color: aliceblue;
+}
+      
+
+
+.label{
+    position: absolute;
+    color: aliceblue;
+    left: 130px;
+    bottom:260px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+}
+
+.btn1{
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    color: aliceblue;
+    background-image: url(wall.webp);
+    border-radius: 50px;
+    left: 100px;
+    bottom: 100px;
+}
+.map{
+    position: absolute;
+    background-image: url(wall.webp);
+    width: 700px;
+    height: 450px;
+    bottom: 60px;
+    left: 790px;
+}
+.text{
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    bottom: 180px;
+    left: 100px;
+    border-radius: 50px;
+}
+.map1{
+    position: absolute;
+    color: antiquewhite;
+    left: 1220px;
+    top:200px;
+}
+.h1{
+    position: absolute;
+    color:azure;
+    left: 600px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+}
+.data{
+    font-size: smaller;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.map-container {
+    position: absolute;
+    top: 300px;
+    height: 400px; /* Set the desired height */
+    width: 700px; /* Set the desired width */
+    left: 40px;
+    box-sizing: content-box; 
+    background-color: aliceblue;
+    border-radius: 50px;
+    /* Ensure proper positioning of the map within the container */
+  }
+  #map{
+    position: absolute;
+background-color:aliceblue;
+width: 700px;
+height: 400px;
+
+  }
+  .h3{
+color: white;
+font-size: smaller;
+font-weight: 600;
+text-align: justify;
+position: absolute;
+top: 100px;
+width: 600px;
+left: 800px;
+  }
+  
+  
