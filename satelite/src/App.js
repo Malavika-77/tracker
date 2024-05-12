@@ -3,6 +3,7 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import axios from 'axios'; // Import axios for making HTTP requests
 import Earth from './earth.gif';
+import sate from './sate.jpg';
 
 import './style.css';
 
@@ -25,7 +26,7 @@ function App() {
     const map = L.map('map').setView([0, 0], 1);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{y}/{x}.png').addTo(map);
 
-    const iconUrl = 'sate.jpg';
+    const iconUrl = {sate};
     const customIcon = L.icon({
       iconUrl: iconUrl,
       iconSize: [38, 38],
