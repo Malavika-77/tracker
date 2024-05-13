@@ -1,0 +1,3 @@
+build:
+  - name: Build Frontend
+    cmd: npm install && npm run build
