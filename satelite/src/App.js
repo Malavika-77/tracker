@@ -4,7 +4,6 @@ import L from 'leaflet';
 import axios from 'axios'; // Import axios for making HTTP requests
 import Earth from './earth.gif';
 import sate from './sate.jpg';
-import connectWebSocket from './WebSocketClient'; // Import WebSocket client
 
 import './style.css';
 
@@ -50,14 +49,11 @@ function App() {
     };
 
     const marker = L.marker([0, 0], { icon: customIcon }).addTo(map);
-    const ws = connectWebSocket();
 
     updateMarker();
 
-
     return () => {
       map.remove();
-      ws.close();
     };
   }, [satelliteLatitude, satelliteLongitude, ]);
 
