@@ -4,6 +4,7 @@ import L from 'leaflet';
 import axios from 'axios'; // Import axios for making HTTP requests
 import Earth from './earth.gif';
 import sate from './sate.jpg';
+import connectWebSocket from './WebSocketClient'; // Import WebSocket client
 
 import './style.css';
 
@@ -49,64 +50,14 @@ function App() {
     };
 
     const marker = L.marker([0, 0], { icon: customIcon }).addTo(map);
+    const ws = connectWebSocket();
 
     updateMarker();
 
 
-
-    const ws = new WebSocket('wss://tracker-krmq.onrender.com/ws');
-
-    ws.onopen = () => {
-      console.log('WebSocket connected');
-    };
-    
-    ws.onmessage = (event) => {
-      console.log('Received:', event.data);
-    
-      // Parse the JSON data received from the WebSocket message
-      const data = JSON.parse(event.data);
-    
-      // Extract relevant information from the positions array
-      const { satname, satlatitude, satlongitude, azimuth, elevation, ra, dec, timestamp } = data.positions[0];
-    
-      // Display the extracted information
-      console.log('Satellite Name:', satname);
-      console.log('Satellite Latitude:', satlatitude);
-      console.log('Satellite Longitude:', satlongitude);
-      console.log('Azimuth:', azimuth);
-      console.log('Elevation:', elevation);
-      console.log('RA:', ra);
-      console.log('Dec:', dec);
-      console.log('Timestamp:', timestamp);
-    };
-    
-    ws.onclose = () => {
-      console.log('WebSocket disconnected');
-    };
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return () => {
       map.remove();
+      ws.close();
     };
   }, [satelliteLatitude, satelliteLongitude, ]);
 
