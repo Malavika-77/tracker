@@ -1,5 +1,5 @@
 const connectWebSocket = () => {
-    const ws = new WebSocket('wss://tracker-krmq.onrender.com/ws');
+    const ws = new WebSocket('wss://tracker-ay6d.onrender.com/ws');
 
     ws.onopen = () => {
         console.log('WebSocket connected');
