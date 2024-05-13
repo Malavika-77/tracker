@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, 'src')));
 
 app.use(express.static(path.join(__dirname, 'build')));
 
- const PORT=3000;
+ const PORT=10000;
 
 
 app.use(express.json());
